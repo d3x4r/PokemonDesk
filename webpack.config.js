@@ -7,7 +7,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', 'jsx', '.json'],
   },
   mode: NODE_ENV ? NODE_ENV : 'development',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
@@ -20,7 +20,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.[tj]s?$/,
+        test: /\.[tj]sx?$/,
         loader: 'ts-loader',
       },
       {
