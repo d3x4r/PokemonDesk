@@ -21,19 +21,25 @@ module.exports = {
     rules: [
       {
         test: /\.[tj]sx?$/,
+        exclude: '/node_modules/',
         loader: 'ts-loader',
       },
       {
-        test: /\.(s*)css$/i,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.scss$/i,
         use: [
           'style-loader',
+          'css-modules-typescript-loader?modules',
           {
             loader: 'css-loader',
             options: {
               modules: {
                 mode: 'local',
                 localIdentName: '[name]__[local]__[hash:base64:5]',
-                auto: /\.modules\.\w+$/i,
+                auto: /\.module\.\w+$/i,
               },
             },
           },
