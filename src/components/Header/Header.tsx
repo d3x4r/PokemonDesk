@@ -1,8 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import style from './Header.module.scss';
-
-import Logo from '../Logo';
+import { ReactComponent as PokemonLogo } from '../../../assets/logo.svg';
 
 const Header = () => {
   const navigationLinksData = [
@@ -36,15 +35,9 @@ const Header = () => {
     <div className={cn(style.header)}>
       <div className={cn(style['header__content-wrapper'])}>
         <a href="#">
-          <Logo />
+          <PokemonLogo />
         </a>
-        <ul className={cn(style.header__navigation)}>
-          {links}
-          {/* <li className={cn(style['header__navigation-item'], style['header__navigation-item--active'])}>Home</li>
-          <li className={cn(style['header__navigation-item'])}>Pokédex</li>
-          <li className={cn(style['header__navigation-item'])}>Legendaries</li>
-          <li className={cn(style['header__navigation-item'])}>Documentation</li> */}
-        </ul>
+        <ul className={cn(style.header__navigation)}>{links}</ul>
       </div>
     </div>
   );

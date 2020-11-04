@@ -19,6 +19,7 @@
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "css-loader": "^5.0.0",
@@ -44,6 +45,7 @@
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.7",
     "typescript": "^4.0.3",
+    "url-loader": "^4.1.1",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "^3.11.0"
