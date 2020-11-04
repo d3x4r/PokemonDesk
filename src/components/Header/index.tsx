@@ -24,7 +24,9 @@ const Header = () => {
   ];
 
   const links = navigationLinksData.map(({ name, url }) => (
-    <li className={cn(style['header__navigation-item'])} key={name}>
+    <li
+      className={cn(style['header__navigation-item'], name === 'Home' ? style['header__navigation-item--active'] : '')}
+      key={name}>
       <a className={cn(style['header__navigation-link'])} href={url}>
         {name}
       </a>

@@ -32,16 +32,29 @@
   font-size: 25px;
   line-height: 29px;
   font-weight: 400;
+  cursor: pointer;
 
-  &--active::before {
+  &::before {
+    box-sizing: border-box;
     content: '';
     display: block;
     position: absolute;
     bottom: 10px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 1%;
     height: 3px;
     background-color: $dark;
+    border-radius: 6px;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
+  }
+
+  &--active::before,
+  &:hover::before {
+    opacity: 1;
+    width: 100%;
   }
 }
 
