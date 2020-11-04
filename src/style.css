@@ -1,0 +1,11 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
