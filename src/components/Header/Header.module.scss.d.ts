@@ -6,6 +6,7 @@ interface CssExports {
   header__navigation: string;
   'header__navigation-item': string;
   'header__navigation-item--active': string;
+  'header__navigation-link': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
