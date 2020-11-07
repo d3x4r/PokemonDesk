@@ -4,16 +4,16 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Parallax from '../../components/Parallax';
+import Layout from '../../components/Layout';
 
 const HomePage = () => {
   return (
     <div className={style['home-page']}>
       <Header />
-      <div>
+      <Layout>
         <Parallax />
         <Button onClick={() => {}}>See pokemons</Button>
-      </div>
-
+      </Layout>
       <Footer />
     </div>
   );
