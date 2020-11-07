@@ -1,17 +1,21 @@
 import React from 'react';
 import cn from 'classnames';
+import { Link, useLocation } from 'react-router-dom';
 import style from './Header.module.scss';
 import { ReactComponent as PokemonLogo } from '../../../assets/logo.svg';
 
 const Header = () => {
+  // const [selectedPage, setSelectedPage] = useState('Home');
+  const { pathname } = useLocation();
+
   const navigationLinksData = [
     {
       name: 'Home',
-      url: '#',
+      url: '/',
     },
     {
       name: 'Pokédex',
-      url: '#',
+      url: '/pokedex',
     },
     {
       name: 'Legendaries',
@@ -25,11 +29,11 @@ const Header = () => {
 
   const links = navigationLinksData.map(({ name, url }) => (
     <li
-      className={cn(style['header__navigation-item'], name === 'Home' ? style['header__navigation-item--active'] : '')}
+      className={cn(style['header__navigation-item'], url === pathname ? style['header__navigation-item--active'] : '')}
       key={name}>
-      <a className={cn(style['header__navigation-link'])} href={url}>
+      <Link className={cn(style['header__navigation-link'])} to={url}>
         {name}
-      </a>
+      </Link>
     </li>
   ));
 
