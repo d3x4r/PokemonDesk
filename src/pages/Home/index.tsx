@@ -11,8 +11,16 @@ const HomePage = () => {
     <div className={style['home-page']}>
       <Header />
       <Layout>
-        <Parallax />
-        <Button onClick={() => {}}>See pokemons</Button>
+        <div className={style['home-page__content-wrapper']}>
+          <div className={style['home-page__text-column']}>
+            <h1>Find all your favorite Pokemon</h1>
+            <p>You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
+            <Button onClick={() => {}}>See pokemons</Button>
+          </div>
+          <div className={style['home-page__img-column']}>
+            <Parallax />
+          </div>
+        </div>
       </Layout>
       <Footer />
     </div>

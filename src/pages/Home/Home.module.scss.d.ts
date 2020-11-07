@@ -2,6 +2,9 @@
 // Please do not change this file!
 interface CssExports {
   'home-page': string;
+  'home-page__content-wrapper': string;
+  'home-page__img-column': string;
+  'home-page__text-column': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
