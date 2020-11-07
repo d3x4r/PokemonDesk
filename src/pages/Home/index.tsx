@@ -14,10 +14,12 @@ const HomePage = () => {
       <Layout>
         <div className={style['home-page__content-wrapper']}>
           <div className={style['home-page__text-column']}>
-            <Heading>
+            <Heading className={style['home-page__title']}>
               <b>Find</b> all your favorite <b>Pokemon</b>
             </Heading>
-            <p>You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
+            <p className={style['home-page__text']}>
+              You can know the type of Pokemon, its strengths, disadvantages and abilities
+            </p>
             <Button onClick={() => {}}>See pokemons</Button>
           </div>
           <div className={style['home-page__img-column']}>

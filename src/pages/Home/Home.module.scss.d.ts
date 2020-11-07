@@ -4,7 +4,9 @@ interface CssExports {
   'home-page': string;
   'home-page__content-wrapper': string;
   'home-page__img-column': string;
+  'home-page__text': string;
   'home-page__text-column': string;
+  'home-page__title': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
