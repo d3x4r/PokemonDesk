@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Parallax from '../../components/Parallax';
 import Layout from '../../components/Layout';
+import Heading from '../../components/Heading';
 
 const HomePage = () => {
   return (
@@ -13,7 +14,9 @@ const HomePage = () => {
       <Layout>
         <div className={style['home-page__content-wrapper']}>
           <div className={style['home-page__text-column']}>
-            <h1>Find all your favorite Pokemon</h1>
+            <Heading>
+              <b>Find</b> all your favorite <b>Pokemon</b>
+            </Heading>
             <p>You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
             <Button onClick={() => {}}>See pokemons</Button>
           </div>

@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  font-family: Karla, sans-serif;
+  color: $dark;
+  font-weight: 400;
+
+  &-h1 {
+    font-size: 72px;
+    line-height: 84px;
+    letter-spacing: 4px;
+  }
+
+  &-h2 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  &-h3 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &-h4 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+
+  &-h5 {
+    font-size: 18;
+    line-height: 22px;
+  }
+
+  &-h6 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
