@@ -23,8 +23,28 @@
 
   color: $dark;
 
+  &--yellow {
+    background-color: $primary;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
   &:active {
     padding-top: 18px;
     box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.18);
+  }
+
+  &--small {
+    padding-top: 7px;
+    padding-bottom: 14px;
+
+    font-size: 17px;
+    line-height: 20px;
+
+    &:active {
+      padding-top: 8px;
+    }
   }
 }
