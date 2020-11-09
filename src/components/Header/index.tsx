@@ -1,12 +1,11 @@
 import React from 'react';
 import cn from 'classnames';
-import { Link, useLocation } from 'react-router-dom';
+import { A, usePath } from 'hookrouter';
 import style from './Header.module.scss';
 import { ReactComponent as PokemonLogo } from '../../../assets/logo.svg';
 
 const Header = () => {
-  // const [selectedPage, setSelectedPage] = useState('Home');
-  const { pathname } = useLocation();
+  const pathname = usePath();
 
   const navigationLinksData = [
     {
@@ -31,9 +30,9 @@ const Header = () => {
     <li
       className={cn(style['header__navigation-item'], url === pathname ? style['header__navigation-item--active'] : '')}
       key={name}>
-      <Link className={cn(style['header__navigation-link'])} to={url}>
+      <A className={cn(style['header__navigation-link'])} href={url}>
         {name}
-      </Link>
+      </A>
     </li>
   ));
 
