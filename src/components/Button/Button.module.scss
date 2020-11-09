@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.button {
+  display: flex;
+  justify-content: center;
+
+  background: #73d677;
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  border: none;
+
+  padding-top: 17px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 24px;
+
+  cursor: pointer;
+
+  font-family: 'Karla', sans-serif;
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 600;
+
+  color: $dark;
+
+  &--yellow {
+    background-color: $primary;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &:active {
+    padding-top: 18px;
+    box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.18);
+  }
+
+  &--small {
+    padding-top: 7px;
+    padding-bottom: 14px;
+
+    font-size: 17px;
+    line-height: 20px;
+
+    &:active {
+      padding-top: 8px;
+    }
+  }
+}

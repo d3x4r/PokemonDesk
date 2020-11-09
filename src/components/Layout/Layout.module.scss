@@ -1,0 +1,12 @@
+@import '../../breakpoints';
+
+.layout {
+  width: 100%;
+  max-width: 1125px;
+  padding: 0 75px;
+  margin: 0 auto;
+
+  @include media('>tablet', '<desktop') {
+    padding: 0 20px;
+  }
+}
