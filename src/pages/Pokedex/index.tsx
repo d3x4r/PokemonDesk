@@ -3,7 +3,11 @@ import style from './Pokedex.module.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const PokedexPage = () => {
+interface PokedexPageProps {
+  title: string;
+}
+
+const PokedexPage: React.FC<PokedexPageProps> = ({ title }) => {
   return (
     <div className={style.pokedex}>
       <Header />
