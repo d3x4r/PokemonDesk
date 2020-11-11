@@ -122,11 +122,52 @@
 
   &:nth-child(1) {
     margin-right: 10px;
-    background-color: #73d677;
   }
 
   &:nth-child(2) {
     background-color: #07d6f2;
+  }
+
+  &--bug,
+  &--grass {
+    background-color: #73d677;
+  }
+
+  &--stile,
+  &--dark,
+  &--rock {
+    background-color: #a1a1a1;
+  }
+
+  &--ice,
+  &--water {
+    background-color: #a2cff0;
+  }
+
+  &--fire,
+  &--fighting,
+  &--dragon {
+    background-color: #f76545;
+  }
+
+  &--normal,
+  &--gosth {
+    background-color: #76aadb;
+  }
+
+  &--ground {
+    background-color: #9b897b;
+  }
+
+  &--electric {
+    background-color: #f7c545;
+  }
+
+  &--poison,
+  &--fairy,
+  &--psychic,
+  &--ghost {
+    background-color: #a974bc;
   }
 }
 

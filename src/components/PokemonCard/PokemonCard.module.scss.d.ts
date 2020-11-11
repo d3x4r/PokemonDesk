@@ -14,7 +14,25 @@ interface CssExports {
   'pokemon-card__stat-title': string;
   'pokemon-card__title': string;
   'pokemon-card__type-badge': string;
+  'pokemon-card__type-badge--bug': string;
+  'pokemon-card__type-badge--dark': string;
+  'pokemon-card__type-badge--dragon': string;
+  'pokemon-card__type-badge--electric': string;
+  'pokemon-card__type-badge--fairy': string;
+  'pokemon-card__type-badge--fighting': string;
+  'pokemon-card__type-badge--fire': string;
   'pokemon-card__type-badge--first': string;
+  'pokemon-card__type-badge--ghost': string;
+  'pokemon-card__type-badge--gosth': string;
+  'pokemon-card__type-badge--grass': string;
+  'pokemon-card__type-badge--ground': string;
+  'pokemon-card__type-badge--ice': string;
+  'pokemon-card__type-badge--normal': string;
+  'pokemon-card__type-badge--poison': string;
+  'pokemon-card__type-badge--psychic': string;
+  'pokemon-card__type-badge--rock': string;
+  'pokemon-card__type-badge--stile': string;
+  'pokemon-card__type-badge--water': string;
   'pokemond-card__types-list': string;
 }
 export const cssExports: CssExports;
