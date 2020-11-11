@@ -9,11 +9,10 @@
     "@types/classnames": "^2.2.11",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
-    "@types/react-router-dom": "^5.1.6",
     "classnames": "^2.2.6",
+    "hookrouter": "^1.2.3",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-dom": "^17.0.1"
   },
   "scripts": {
     "start:dev": "env NODE_ENV=development webpack-dev-server",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
+    "@types/hookrouter": "^2.2.3",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "css-loader": "^5.0.0",

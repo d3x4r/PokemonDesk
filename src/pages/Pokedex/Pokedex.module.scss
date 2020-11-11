@@ -1,4 +1,21 @@
 .pokedex {
   //temp
-  position: realtive;
+  position: relative;
+}
+
+.pokedex__pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 45px;
+}
+
+.pokedex__pokemon-item {
+  width: calc(33.33% - 12px);
+  margin-bottom: 45px;
+
+  &--middle-item {
+    margin-right: 18px;
+    margin-left: 18px;
+  }
 }
