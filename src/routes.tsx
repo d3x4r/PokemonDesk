@@ -18,17 +18,17 @@ export const navigationData = [
   {
     title: 'Pokédex',
     url: LinkEnum.POKEDEX,
-    component: () => <PokedexPage title="Pokédex" />,
+    component: () => <PokedexPage />,
   },
   {
     title: 'Legendaries',
     url: LinkEnum.LEGENDARIES,
-    component: () => <PokedexPage title="Pokédex" />,
+    component: () => <PokedexPage />,
   },
   {
     title: 'Documentation',
     url: LinkEnum.DOCUMENTATION,
-    component: () => <PokedexPage title="Pokédex" />,
+    component: () => <PokedexPage />,
   },
 ];
 

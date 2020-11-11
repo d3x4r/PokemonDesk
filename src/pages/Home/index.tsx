@@ -2,8 +2,6 @@ import React from 'react';
 import { navigate } from 'hookrouter';
 import { LinkEnum } from '../../routes';
 import style from './Home.module.scss';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Parallax from '../../components/Parallax';
 import Layout from '../../components/Layout';
@@ -12,7 +10,6 @@ import Heading from '../../components/Heading';
 const HomePage = () => {
   return (
     <div className={style['home-page']}>
-      <Header />
       <Layout>
         <div className={style['home-page__content-wrapper']}>
           <div className={style['home-page__text-column']}>
@@ -29,7 +26,6 @@ const HomePage = () => {
           </div>
         </div>
       </Layout>
-      <Footer />
     </div>
   );
 };
