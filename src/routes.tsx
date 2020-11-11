@@ -2,25 +2,32 @@ import React from 'react';
 import HomePage from './pages/Home';
 import PokedexPage from './pages/Pokedex';
 
+export enum LinkEnum {
+  HOME = '/',
+  POKEDEX = '/pokedex',
+  LEGENDARIES = '/legendaries',
+  DOCUMENTATION = '/documentation',
+}
+
 export const navigationData = [
   {
     title: 'Home',
-    url: '/',
+    url: LinkEnum.HOME,
     component: () => <HomePage />,
   },
   {
     title: 'Pokédex',
-    url: '/pokedex',
+    url: LinkEnum.POKEDEX,
     component: () => <PokedexPage title="Pokédex" />,
   },
   {
     title: 'Legendaries',
-    url: '/legendaries',
+    url: LinkEnum.LEGENDARIES,
     component: () => <PokedexPage title="Pokédex" />,
   },
   {
     title: 'Documentation',
-    url: '/documentation',
+    url: LinkEnum.DOCUMENTATION,
     component: () => <PokedexPage title="Pokédex" />,
   },
 ];

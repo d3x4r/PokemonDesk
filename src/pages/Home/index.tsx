@@ -1,4 +1,6 @@
 import React from 'react';
+import { navigate } from 'hookrouter';
+import { LinkEnum } from '../../routes';
 import style from './Home.module.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -20,7 +22,7 @@ const HomePage = () => {
             <p className={style['home-page__text']}>
               You can know the type of Pokemon, its strengths, disadvantages and abilities
             </p>
-            <Button onClick={() => {}}>See pokemons</Button>
+            <Button onClick={() => navigate(LinkEnum.POKEDEX)}>See pokemons</Button>
           </div>
           <div className={style['home-page__img-column']}>
             <Parallax />
