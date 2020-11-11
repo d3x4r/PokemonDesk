@@ -6,8 +6,6 @@
 .pokedex__pokemon-list {
   display: flex;
   flex-wrap: wrap;
-
-  padding-top: 45px;
 }
 
 .pokedex__pokemon-item {
@@ -18,4 +16,8 @@
     margin-right: 18px;
     margin-left: 18px;
   }
+}
+
+.pokedex__header {
+  text-align: center;
 }
