@@ -23,7 +23,7 @@ const PokedexPage: React.FC<PokedexPageProps> = ({ title }) => {
               [style['pokedex__pokemon-item--middle-item']]: (index + 1) % 3 === 2,
             };
 
-            return <PokemonCard className={cn(classes)} pokemonInfo={pokemonInfo} />;
+            return <PokemonCard className={cn(classes)} pokemonInfo={pokemonInfo} key={pokemonInfo.name} />;
           })}
         </div>
       </Layout>

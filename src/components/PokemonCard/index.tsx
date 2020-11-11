@@ -12,7 +12,11 @@ interface PokemonCardProps {
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemonInfo: { types, stats, img, name }, className }) => {
   const pokemonTypesBadges = types.map((pokemonTypeName) => {
-    return <li className={cn(style['pokemon-card__type-badge'])}>{pokemonTypeName}</li>;
+    return (
+      <li key={pokemonTypeName} className={cn(style['pokemon-card__type-badge'])}>
+        {pokemonTypeName}
+      </li>
+    );
   });
 
   const themedImageClassName = `pokemon-card__img-container--${types[0]}`;
