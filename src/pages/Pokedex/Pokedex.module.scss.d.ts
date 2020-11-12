@@ -2,6 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   pokedex: string;
+  pokedex__header: string;
   'pokedex__pokemon-item': string;
   'pokedex__pokemon-item--middle-item': string;
   'pokedex__pokemon-list': string;

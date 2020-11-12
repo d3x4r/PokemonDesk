@@ -231,4 +231,12 @@ const pokemons: PokemonInfoType[] = [
   },
 ];
 
+export interface API {
+  count: number;
+  total: number;
+  limit: number;
+  offset: number;
+  pokemons: PokemonInfoType[];
+}
+
 export default pokemons;

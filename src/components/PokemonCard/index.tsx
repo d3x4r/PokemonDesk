@@ -12,12 +12,23 @@ interface PokemonCardProps {
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemonInfo: { types, stats, img, name }, className }) => {
   const pokemonTypesBadges = types.map((pokemonTypeName) => {
-    return <li className={cn(style['pokemon-card__type-badge'])}>{pokemonTypeName}</li>;
+    const themedBadgeClassName = `pokemon-card__type-badge--${pokemonTypeName}`;
+    const themeBadgeDefined = themedBadgeClassName in style;
+    return (
+      <li
+        key={pokemonTypeName}
+        className={cn(
+          style['pokemon-card__type-badge'],
+          themeBadgeDefined ? style[themedBadgeClassName as keyof typeof style] : '',
+        )}>
+        {pokemonTypeName}
+      </li>
+    );
   });
 
   const themedImageClassName = `pokemon-card__img-container--${types[0]}`;
 
-  const themeDefined = themedImageClassName in style;
+  const themeImageDefined = themedImageClassName in style;
 
   return (
     <div className={cn(style['pokemon-card'], className)}>
@@ -40,7 +51,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemonInfo: { types, stats, 
       <div
         className={cn(
           style['pokemon-card__img-container'],
-          themeDefined ? style[themedImageClassName as keyof typeof style] : '',
+          themeImageDefined ? style[themedImageClassName as keyof typeof style] : '',
         )}>
         <img className={style['pokemon-card__img']} src={img} alt={name} />
       </div>
