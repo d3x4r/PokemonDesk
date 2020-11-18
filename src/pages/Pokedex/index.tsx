@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 import Heading from '../../components/Heading';
 import PokemonCard from '../../components/PokemonCard';
 import { API } from './data';
-import config from '../../config';
+import req from '../../utils/request';
 
 const usePokemons = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,20 +15,8 @@ const usePokemons = () => {
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
-      const {
-        client: {
-          server: { host, protocol },
-          endpoint: {
-            getPokemons: {
-              uri: { pathname },
-            },
-          },
-        },
-      } = config;
-      const url = `${protocol}://${host}${pathname}`;
       try {
-        const response = await fetch(url);
-        const body: API = await response.json();
+        const body: API = await req('getPokemons');
         setData(body);
       } catch (err) {
         setErrorMessage(err.message);
