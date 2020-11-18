@@ -1,45 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import style from './Pokedex.module.scss';
 import Layout from '../../components/Layout';
 import Heading from '../../components/Heading';
 import PokemonCard from '../../components/PokemonCard';
+import useData from '../../hook/getData';
 import { API } from './data';
-import req from '../../utils/request';
-
-const usePokemons = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState({} as API);
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const fetchData = async () => {
-      try {
-        const body: API = await req('getPokemons');
-        setData(body);
-      } catch (err) {
-        setErrorMessage(err.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
-  return {
-    isLoading,
-    data,
-    errorMessage,
-  };
-};
 
 const PokedexPage: React.FC = () => {
-  const {
-    data: { count, pokemons },
-    isLoading,
-    errorMessage,
-  } = usePokemons();
+  const { data, isLoading, errorMessage } = useData<API>('getPokemons');
 
   if (isLoading) {
     return <div>loading...</div>;
@@ -49,14 +18,18 @@ const PokedexPage: React.FC = () => {
     return <div>{errorMessage}</div>;
   }
 
+  if (data === null) {
+    return null;
+  }
+
   return (
     <div className={style.pokedex}>
       <Layout>
         <Heading className={style.pokedex__header} as="h3">
-          {count} <b>Pokemons</b> for you to choose your favorite
+          {data.count} <b>Pokemons</b> for you to choose your favorite
         </Heading>
         <div className={style['pokedex__pokemon-list']}>
-          {pokemons.map((pokemonInfo, index) => {
+          {data.pokemons.map((pokemonInfo, index) => {
             const classes = {
               [style['pokedex__pokemon-item']]: true,
               [style['pokedex__pokemon-item--middle-item']]: (index + 1) % 3 === 2,
