@@ -1,12 +1,14 @@
 import React from 'react';
 import HomePage from './pages/Home';
 import PokedexPage from './pages/Pokedex';
+import PokemonPage, { PokemonPageProps } from './pages/Pokemon';
 
 export enum LinkEnum {
   HOME = '/',
   POKEDEX = '/pokedex',
   LEGENDARIES = '/legendaries',
   DOCUMENTATION = '/documentation',
+  POKEMON = '/pokedex/:id',
 }
 
 export const navigationData = [
@@ -32,8 +34,19 @@ export const navigationData = [
   },
 ];
 
-const routes: { [item: string]: () => JSX.Element } = navigationData.reduce((acc, { url, component }) => {
-  return { ...acc, [url]: component };
-}, {});
+const secondRoutes = [
+  {
+    title: 'Pokemon',
+    url: LinkEnum.POKEMON,
+    component: ({ id }: PokemonPageProps) => <PokemonPage id={id} />,
+  },
+];
+
+const routes: { [item: string]: () => JSX.Element } = [...navigationData, ...secondRoutes].reduce(
+  (acc, { url, component }) => {
+    return { ...acc, [url]: component };
+  },
+  {},
+);
 
 export default routes;
