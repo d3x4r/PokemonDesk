@@ -5,12 +5,14 @@ import Layout from '../../components/Layout';
 import Heading from '../../components/Heading';
 import PokemonCard from '../../components/PokemonCard';
 import useData from '../../hook/getData';
+import useDebounce from '../../hook/useDebounce';
 import { API } from './data';
 
 const PokedexPage: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [query, setQuery] = useState({ name: '' });
-  const { data, isLoading, errorMessage } = useData<API>('getPokemons', query, [searchValue]);
+  const debouncedSearchValue = useDebounce(searchValue, 500);
+  const { data, isLoading, errorMessage } = useData<API>('getPokemons', query, [debouncedSearchValue]);
 
   const onChangeSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(event.target.value);
